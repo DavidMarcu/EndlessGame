@@ -10,6 +10,7 @@ public class Boundary
 
 public class Movement : MonoBehaviour
 {
+
     public float yPosition = 0.0f;
     public float zPosition = 0.0f;
 
@@ -32,9 +33,10 @@ public class Movement : MonoBehaviour
 
         rb2d = GetComponent<Rigidbody>();
     }
-
+   
     private void FixedUpdate()
     {
+
         Vector3 inputAccelerometer;
         float horizontal;
 

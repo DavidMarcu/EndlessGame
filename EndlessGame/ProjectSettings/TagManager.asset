@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TrueObstacle
   - FakeObstacle
+  - Portal
   layers:
   - Default
   - TransparentFX

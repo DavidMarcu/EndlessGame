@@ -9,13 +9,17 @@ public class CreatePortal : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         Transform otherTransform = other.gameObject.transform;
-        if (other.gameObject.tag == "FakeObstacle")
+
+        if(other.gameObject.tag != "FakeObstacle")
+        {
+            Destroy(gameObject);
+        }
+        else
         {
             GameObject newPortal = Instantiate(portal, new Vector3(this.transform.position.x, otherTransform.position.y, otherTransform.position.z), Quaternion.identity);
             MovingUp movingUpScr = newPortal.GetComponent<MovingUp>();
             MovingUp otherMovingUpScr = other.gameObject.GetComponent<MovingUp>();
             movingUpScr.speed = otherMovingUpScr.speed;
         }
-            Destroy(gameObject);
     }
 }

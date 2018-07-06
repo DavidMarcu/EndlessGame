@@ -179,6 +179,11 @@ Prefab:
       propertyPath: wrapSpace
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 114455541407409834, guid: 69c74ecf9e9388640ae6151db49543f6,
+        type: 2}
+      propertyPath: delayShotSeconds
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69c74ecf9e9388640ae6151db49543f6, type: 2}
   m_IsPrefabParent: 0

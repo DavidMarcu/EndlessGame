@@ -110,7 +110,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1029949352595122}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1254230110656850, guid: 6ebaf9f48a1c7c74d9f4b6ca98efaa80, type: 2}
+  delayShotSeconds: 0.25
 --- !u!114 &114986597471220198
 MonoBehaviour:
   m_ObjectHideFlags: 1

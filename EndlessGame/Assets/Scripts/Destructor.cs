@@ -14,20 +14,20 @@ public class Destructor : MonoBehaviour {
         playerMovement = this.GetComponent<Movement>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         if(!touchingPortal)
         {
-            if(collision.gameObject.tag == "FakeObstacle" ||
-               collision.gameObject.tag == "TrueObstacle")
+            if(other.gameObject.tag == "FakeObstacle" ||
+               other.gameObject.tag == "TrueObstacle")
             {
                 Time.timeScale = 0;
             }
         }
 
-        if (collision.gameObject.tag == "Portal")
+        if (other.gameObject.tag == "Portal")
         {
-            if(Mathf.Abs(collision.gameObject.transform.position.x - this.transform.position.x) < wrapSpace)
+            if(Mathf.Abs(other.gameObject.transform.position.x - this.transform.position.x) < wrapSpace)
             {
                 //Debug.Log("collision");
                 touchingPortal = true;
@@ -37,9 +37,9 @@ public class Destructor : MonoBehaviour {
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "Portal")
+        if (other.gameObject.tag == "Portal")
         {
             touchingPortal = false;
             playerMovement.speed = lastPlayerSpeed;

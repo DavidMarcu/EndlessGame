@@ -7,6 +7,7 @@ TagManager:
   - TrueObstacle
   - FakeObstacle
   - Portal
+  - Bullet
   layers:
   - Default
   - TransparentFX

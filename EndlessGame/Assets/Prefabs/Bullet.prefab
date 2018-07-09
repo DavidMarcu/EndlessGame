@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portal: {fileID: 1971151728225448, guid: dc8400e9b9858914ba0a6af0db7f3493, type: 2}
+  exitPortal: {fileID: 1386220250891916, guid: 51a660675ea58e945bb0815f294b6a0d, type: 2}
 --- !u!114 &114524630963872780
 MonoBehaviour:
   m_ObjectHideFlags: 1

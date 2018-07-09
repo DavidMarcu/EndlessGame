@@ -10,17 +10,16 @@ public class Boundary
 
 public class Movement : MonoBehaviour
 {
-
-    public float yPosition = 0.0f;
-    public float zPosition = 0.0f;
-
     public float speed = 5;
+    private float lastSpeed;
     private Rigidbody rb2d;
     public Boundary boundary;
     private bool onAndroid = true;
 
     private void Start()
     {
+        lastSpeed = speed;
+
         if (Application.platform == RuntimePlatform.Android)
         {
             onAndroid = true;
@@ -54,6 +53,17 @@ public class Movement : MonoBehaviour
         Vector3 movement = new Vector3(horizontal, 0.0f, 0.0f);
         rb2d.velocity = movement * speed;
 
-        rb2d.position = new Vector3(Mathf.Clamp(rb2d.position.x, boundary.xMin, boundary.xMax), yPosition, zPosition);
+        rb2d.position = new Vector3(Mathf.Clamp(rb2d.position.x, boundary.xMin, boundary.xMax), this.transform.position.y, this.transform.position.z);
+    }
+
+    public void isMoving(bool move)
+    {
+        if (!move)
+        {
+            lastSpeed = speed;
+            speed = 0f;
+        }
+        else
+            speed = lastSpeed;
     }
 }

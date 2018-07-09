@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114047946054089154}
   - component: {fileID: 114455541407409834}
   - component: {fileID: 114986597471220198}
+  - component: {fileID: 114504810352050238}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -41,7 +42,7 @@ Transform:
   m_GameObject: {fileID: 1029949352595122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -111,7 +112,7 @@ BoxCollider:
   m_GameObject: {fileID: 1029949352595122}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -126,8 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd0bdd853142aa4e83e4a062de362cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yPosition: 4
-  zPosition: 0
   speed: 5
   boundary:
     xMin: -2.5
@@ -144,7 +143,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1254230110656850, guid: 6ebaf9f48a1c7c74d9f4b6ca98efaa80, type: 2}
-  delayShotSeconds: 0.25
+  delayShotSeconds: 0.5
+--- !u!114 &114504810352050238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1029949352595122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6228ff2340bec9e4e991174fec864b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114986597471220198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,4 +166,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cedfab4fdc56324190f9405136776aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrapSpace: 2.5

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Destructor : MonoBehaviour {
 
-    private Renderer renderer;
+    private new Renderer renderer;
 
     private void Start()
     {

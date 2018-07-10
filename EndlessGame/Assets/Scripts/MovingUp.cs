@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingUp : MonoBehaviour {
-
-    public float speed;
-	
-	// Update is called once per frame
+    
 	void Update () {
-        transform.Translate(0.0f, speed * Time.deltaTime, 0.0f);
+        transform.Translate(0.0f, GlobalVars.speed * Time.deltaTime, 0.0f);    
 	}
 
 }

@@ -22,18 +22,8 @@ public class CreatePortal : MonoBehaviour {
             float portalYPosition = otherTransform.position.y + otherTransform.localScale.y / 2 + portal.transform.localScale.y + gapBetweenPortalAndObject;
             float exitPortalYPosition = otherTransform.position.y - otherTransform.localScale.y / 2 - portal.transform.localScale.y - gapBetweenPortalAndObject;
 
-            GameObject newPortal = Instantiate(portal, new Vector3(this.transform.position.x, portalYPosition, otherTransform.position.z), Quaternion.identity);
-            GameObject newExitPortal = Instantiate(exitPortal, new Vector3(this.transform.position.x, exitPortalYPosition, otherTransform.position.z), Quaternion.identity);
-
-
-            MovingUp portalMovement = newPortal.GetComponent<MovingUp>();
-            MovingUp exitPortalMovement = newExitPortal.GetComponent<MovingUp>();
-
-
-            MovingUp otherMovingUpScr = other.gameObject.GetComponent<MovingUp>();
-
-            portalMovement.speed = otherMovingUpScr.speed;
-            exitPortalMovement.speed = otherMovingUpScr.speed;
+            Instantiate(portal, new Vector3(this.transform.position.x, portalYPosition, otherTransform.position.z), Quaternion.identity);
+            Instantiate(exitPortal, new Vector3(this.transform.position.x, exitPortalYPosition, otherTransform.position.z), Quaternion.identity);
 
         }
     }

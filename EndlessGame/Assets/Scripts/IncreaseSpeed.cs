@@ -8,7 +8,7 @@ public class IncreaseSpeed : MonoBehaviour {
 
 	void Update () {
 
-        if(GlobalVars.speed < 10)
+        if(GlobalVars.speed < GlobalVars.maxSpeed)
         {
             GlobalVars.speed += speedInc * Time.deltaTime;
         }

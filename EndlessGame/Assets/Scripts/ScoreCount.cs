@@ -8,8 +8,11 @@ public class ScoreCount : MonoBehaviour {
 
     private void Update()
     {
-        score += GlobalVars.scoreMultiplier * Time.deltaTime;
-        print((int)score);
+        if (GlobalVars.isGameOn)
+        {
+            score += GlobalVars.scoreMultiplier * Time.deltaTime;
+            print((int)score);
+        }
     }
 
 }

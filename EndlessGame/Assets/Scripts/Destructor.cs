@@ -17,6 +17,7 @@ public class Destructor : MonoBehaviour {
         if(other.gameObject.tag == "Obstacle" && renderer.enabled == true)
         {
             Time.timeScale = 0;
+            GlobalVars.isGameOn = false;
         }
 
     }

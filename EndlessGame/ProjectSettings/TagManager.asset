@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Obstacle
   - ExitPortal
+  - Coin
   layers:
   - Default
   - TransparentFX

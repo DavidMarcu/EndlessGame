@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovingUp : MonoBehaviour {
     
 	void FixedUpdate () {
-        transform.Translate(0.0f, GlobalVars.speed * Time.deltaTime, 0.0f);    
+        transform.Translate(0.0f, GlobalVars.speed * Time.deltaTime, 0.0f, Space.World);    
 	}
 
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour {
 
+    public Canvas timer;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Coin")
@@ -24,12 +26,16 @@ public class Collect : MonoBehaviour {
     IEnumerator SuperSpeed()
     {
         GlobalVars.canPlayerAct = false;
-        GlobalVars.speed = 20f;
+        GlobalVars.speed = GlobalVars.ultraSpeed;
+        GlobalVars.maxSpeed = GlobalVars.ultraSpeed;
         GlobalVars.canPlayerDestroy = true;
-        yield return new WaitForSecondsRealtime(5f);
+        Canvas clock = Instantiate(timer);
+        yield return new WaitForSecondsRealtime(GlobalVars.ultraSpeedTime);
+        Destroy(clock.gameObject);
         GlobalVars.canPlayerDestroy = false;
         GlobalVars.canPlayerAct = true;
-        GlobalVars.speed = 10f;
+        GlobalVars.speed = GlobalVars.normalSpeed;
+        GlobalVars.maxSpeed = GlobalVars.normalSpeed;
     }
 
 }

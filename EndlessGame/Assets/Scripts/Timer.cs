@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour {
     Image clock;
     CanvasRenderer canvasRenderer;
     RectTransform rectTransform;
-    float totalTime = 5f;
+    float totalTime = GlobalVars.ultraSpeedTime;
     float time = 0f;
     float sizeX;
     float sizeY;

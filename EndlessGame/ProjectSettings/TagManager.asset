@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - ExitPortal
   - Coin
+  - PowerUpOne
   layers:
   - Default
   - TransparentFX

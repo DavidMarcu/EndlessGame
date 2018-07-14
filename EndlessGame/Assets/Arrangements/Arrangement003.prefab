@@ -199,6 +199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4478310335921428}
+  - component: {fileID: 114230372773348542}
   m_Layer: 0
   m_Name: Arrangement003
   m_TagString: Untagged
@@ -986,6 +987,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e575bed821044404f804b8af41727c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114230372773348542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1707705650082130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e4bd9e39d1b344b97c2de6bb0cc21d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114276275376526748

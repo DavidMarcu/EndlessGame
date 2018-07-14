@@ -13,6 +13,13 @@ public class Destructor : MonoBehaviour {
             GlobalVars.isGameOn = false;
             GlobalVars.canPlayerAct = false;
         }
+        else
+        {
+            if(other.gameObject.tag == "Obstacle" && GlobalVars.canPlayerDestroy)
+            {
+                Destroy(other.gameObject);
+            }
+        }
 
     }
 

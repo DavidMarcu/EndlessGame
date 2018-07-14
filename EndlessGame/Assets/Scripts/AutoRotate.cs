@@ -10,7 +10,7 @@ public class AutoRotate : MonoBehaviour {
 
         rotateSpeed = 50f * GlobalVars.speed; 
 
-        transform.Rotate(Vector3.forward * rotateSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime, Space.World);
 
     }
 }

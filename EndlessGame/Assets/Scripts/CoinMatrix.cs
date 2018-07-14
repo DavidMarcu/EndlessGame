@@ -20,10 +20,10 @@ public class CoinMatrix {
     {
         List<Vector2> matrix = new List<Vector2>();
 
-        matrix.Add(new Vector2(0,0));
-        matrix.Add(new Vector2(-1, -1));
-        matrix.Add(new Vector2(1, -1));
-        matrix.Add(new Vector2(0, -2));
+        matrix.Add(new Vector2(0,1));
+        matrix.Add(new Vector2(-1, 0));
+        matrix.Add(new Vector2(1, 0));
+        matrix.Add(new Vector2(0, -1));
 
         return matrix;
     }
@@ -32,10 +32,10 @@ public class CoinMatrix {
     {
         List<Vector2> matrix = new List<Vector2>();
 
-        matrix.Add(new Vector2(-2, 0));
-        matrix.Add(new Vector2(-3, -1));
-        matrix.Add(new Vector2(-1, -1));
-        matrix.Add(new Vector2(-2, -2));
+        matrix.Add(new Vector2(-2, 1));
+        matrix.Add(new Vector2(-3, 0));
+        matrix.Add(new Vector2(-1, 0));
+        matrix.Add(new Vector2(-2, -1));
 
         return matrix;
     }
@@ -44,10 +44,10 @@ public class CoinMatrix {
     {
         List<Vector2> matrix = new List<Vector2>();
 
-        matrix.Add(new Vector2(2, 0));
-        matrix.Add(new Vector2(1, -1));
-        matrix.Add(new Vector2(3, -1));
-        matrix.Add(new Vector2(2, -2));
+        matrix.Add(new Vector2(2, 1));
+        matrix.Add(new Vector2(1, 0));
+        matrix.Add(new Vector2(3, 0));
+        matrix.Add(new Vector2(2, -1));
 
         return matrix;
     }
@@ -56,26 +56,26 @@ public class CoinMatrix {
     {
         List<Vector2> matrix = new List<Vector2>();
 
+        matrix.Add(new Vector2(0, 2));
+        matrix.Add(new Vector2(-1, 1));
+        matrix.Add(new Vector2(-2, 0));
+        matrix.Add(new Vector2(-3, -1));
+        matrix.Add(new Vector2(-4, -2));
+
+        matrix.Add(new Vector2(1, 1));
         matrix.Add(new Vector2(0, 0));
         matrix.Add(new Vector2(-1, -1));
         matrix.Add(new Vector2(-2, -2));
         matrix.Add(new Vector2(-3, -3));
-        matrix.Add(new Vector2(-4, -4));
 
+        matrix.Add(new Vector2(2, 0));
         matrix.Add(new Vector2(1, -1));
-        matrix.Add(new Vector2(0, -2));
-        matrix.Add(new Vector2(-1, -3));
-        matrix.Add(new Vector2(-2, -4));
-        matrix.Add(new Vector2(-3, -5));
 
+        matrix.Add(new Vector2(3, -1));
         matrix.Add(new Vector2(2, -2));
-        matrix.Add(new Vector2(1, -3));
 
+        matrix.Add(new Vector2(4, -2));
         matrix.Add(new Vector2(3, -3));
-        matrix.Add(new Vector2(2, -4));
-
-        matrix.Add(new Vector2(4, -4));
-        matrix.Add(new Vector2(3, -5));
 
         return matrix;
     }

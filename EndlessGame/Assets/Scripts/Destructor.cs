@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class Destructor : MonoBehaviour {
 
-    private new Renderer renderer;
-
-    private void Start()
-    {
-        renderer = this.GetComponent<Renderer>();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
 
-        if(other.gameObject.tag == "Obstacle" && renderer.enabled == true)
+        if(other.gameObject.tag == "Obstacle" && GlobalVars.canPlayerAct)
         {
             Time.timeScale = 0;
             GlobalVars.isGameOn = false;
+            GlobalVars.canPlayerAct = false;
         }
 
     }

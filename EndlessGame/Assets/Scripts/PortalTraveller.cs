@@ -18,6 +18,7 @@ public class PortalTraveller : MonoBehaviour {
 
         if (other.gameObject.tag == "Portal")
         {
+            GlobalVars.canPlayerAct = false;
             renderer.enabled = false;
             movement.canMove = false;
         }
@@ -30,6 +31,7 @@ public class PortalTraveller : MonoBehaviour {
         {
             renderer.enabled = true;
             movement.canMove = true;
+            GlobalVars.canPlayerAct = true;
         }
 
     }

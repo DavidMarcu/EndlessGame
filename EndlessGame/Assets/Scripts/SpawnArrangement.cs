@@ -10,16 +10,17 @@ public class SpawnArrangement : MonoBehaviour {
     private float timeBetweenSpawns = 7f;
     private float minTimeBetweenSpawns = 3f;
     private float lastTimeSpawned = 0f;
-    private int arr = 0;
     private float unit = 0.5f;
-    private float translateY = 6f;
+    private float translateY = 17f;
+
+    private int randomValue;
 
     private List<List<Vector2>> coinPositions;
 
     private void Start()
     {
         coinPositions = CoinMatrix.loadPositions();
-        InstantiateCoins();
+        InstantiateMesh();
     }
 
     void Update () {
@@ -28,21 +29,44 @@ public class SpawnArrangement : MonoBehaviour {
 
         if (Time.time - lastTimeSpawned > timeBetweenSpawns) 
         {
-
-            //Instantiate(arrangement[arr], Vector3.zero, Quaternion.identity);
-            InstantiateCoins();
-
-            arr = (arr + 1) % arrangement.Length;
-
+            InstantiateMesh();
             lastTimeSpawned = Time.time;
+        }
+	}
 
+    void InstantiateMesh()
+    {
+        randomValue = Random.Range(0, 2);
+        if (randomValue == 0)
+        {
+            InstantiateArrangement();
+        }
+        else
+        {
+            InstantiateCoins();
+        }
+    }
+
+    void InstantiateArrangement()
+    {
+        randomValue = Random.Range(0, arrangement.Length);
+        while (randomValue == arrangement.Length) // exclude the maximum value to have no exception
+        {
+            randomValue = Random.Range(0, arrangement.Length);
         }
 
-	}
+        Instantiate(arrangement[randomValue], Vector3.zero, Quaternion.identity);
+    }
 
     void InstantiateCoins()
     {
-        List<Vector2> positions = coinPositions[Random.Range(0,coinPositions.Count)]; // can give error when 4 is generated .. :(
+        randomValue = Random.Range(0, coinPositions.Count);
+        while(randomValue == coinPositions.Count) // exclude the maximum value to have no exception
+        {
+            randomValue = Random.Range(0, coinPositions.Count);
+        }
+
+        List<Vector2> positions = coinPositions[randomValue];
 
         foreach(Vector2 position in positions)
         {

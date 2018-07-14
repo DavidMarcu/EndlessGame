@@ -15,7 +15,7 @@ public class PlayerShot : MonoBehaviour {
 
         if (canShoot)
         {
-            if (Input.GetMouseButtonDown(0) && GlobalVars.isGameOn)
+            if (Input.GetMouseButtonDown(0) && GlobalVars.canPlayerAct)
             {
                 Instantiate(bullet, new Vector3(this.transform.position.x, this.transform.position.y - this.transform.localScale.y + 0.5f, this.transform.position.z), Quaternion.identity);
                 canShoot = false;

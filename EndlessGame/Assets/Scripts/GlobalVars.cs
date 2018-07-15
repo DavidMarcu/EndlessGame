@@ -13,7 +13,7 @@ public class GlobalVars{
     public static bool canPlayerAct = true;
     public static bool canPlayerDestroy = false;
     public static int coins = 0;
-
-    public static float ultraSpeedTime = 5f;
+    public static bool areCoinsDuplicated = false;
+    public static float powerUpEffectTime = 5f;
 
 }

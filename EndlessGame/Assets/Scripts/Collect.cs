@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour {
 
-    public Canvas timer;
+    public Canvas powerUpOne;
+    public Canvas powerUpTwo;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Coin")
         {
-            GlobalVars.coins++;
-            Destroy(other.gameObject);
+            if (GlobalVars.areCoinsDuplicated)
+            {
+                GlobalVars.coins += 2;
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                GlobalVars.coins++;
+                Destroy(other.gameObject);
+            }
+            print("Coins" + GlobalVars.coins);
         }
         else
         {
@@ -19,6 +29,14 @@ public class Collect : MonoBehaviour {
             {
                 Destroy(other.gameObject);
                 StartCoroutine(SuperSpeed());
+            }
+            else
+            {
+                if (other.gameObject.tag == "PowerUpTwo")
+                {
+                    Destroy(other.gameObject);
+                    StartCoroutine(DuplicateCoins());
+                }
             }
         }
     }
@@ -29,13 +47,22 @@ public class Collect : MonoBehaviour {
         GlobalVars.speed = GlobalVars.ultraSpeed;
         GlobalVars.maxSpeed = GlobalVars.ultraSpeed;
         GlobalVars.canPlayerDestroy = true;
-        Canvas clock = Instantiate(timer);
-        yield return new WaitForSecondsRealtime(GlobalVars.ultraSpeedTime);
+        Canvas clock = Instantiate(powerUpOne);
+        yield return new WaitForSecondsRealtime(GlobalVars.powerUpEffectTime);
         Destroy(clock.gameObject);
         GlobalVars.canPlayerDestroy = false;
         GlobalVars.canPlayerAct = true;
         GlobalVars.speed = GlobalVars.normalSpeed;
         GlobalVars.maxSpeed = GlobalVars.normalSpeed;
+    }
+
+    IEnumerator DuplicateCoins()
+    {
+        GlobalVars.areCoinsDuplicated = true;
+        Canvas clock = Instantiate(powerUpTwo);
+        yield return new WaitForSecondsRealtime(GlobalVars.powerUpEffectTime);
+        GlobalVars.areCoinsDuplicated = false;
+        Destroy(clock.gameObject);
     }
 
 }

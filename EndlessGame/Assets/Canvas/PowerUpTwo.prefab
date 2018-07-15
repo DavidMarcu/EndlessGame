@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114026883326800518}
   - component: {fileID: 114435071218001804}
   m_Layer: 5
-  m_Name: Timer
+  m_Name: PowerUpTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

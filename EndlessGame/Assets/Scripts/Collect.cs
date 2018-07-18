@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Collect : MonoBehaviour {
+
+    public Text uiCoinsEarned;
 
     public Canvas powerUpOne;
     public Canvas powerUpTwo;
@@ -21,6 +24,7 @@ public class Collect : MonoBehaviour {
                 GlobalVars.coins++;
                 Destroy(other.gameObject);
             }
+            uiCoinsEarned.text = GlobalVars.coins.ToString();
             print("Coins" + GlobalVars.coins);
         }
         else

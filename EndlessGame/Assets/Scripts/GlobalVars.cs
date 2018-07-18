@@ -15,5 +15,5 @@ public class GlobalVars{
     public static int coins = 0;
     public static bool areCoinsDuplicated = false;
     public static float powerUpEffectTime = 5f;
-
+    public static float maxTiltSpeed = 30f;
 }

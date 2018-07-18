@@ -9,6 +9,7 @@ public class Destructor : MonoBehaviour {
 
         if(other.gameObject.tag == "Obstacle" && GlobalVars.canPlayerAct)
         {
+            PlayerPrefs.SetInt("TotalCoins", PlayerPrefs.GetInt("TotalCoins", 0) + GlobalVars.coins);
             Time.timeScale = 0;
             GlobalVars.isGameOn = false;
             GlobalVars.canPlayerAct = false;

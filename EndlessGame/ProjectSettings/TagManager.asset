@@ -11,6 +11,7 @@ TagManager:
   - Coin
   - PowerUpOne
   - PowerUpTwo
+  - TriggSpawn
   layers:
   - Default
   - TransparentFX

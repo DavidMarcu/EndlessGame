@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class SpawnArrangement : MonoBehaviour {
 
+    public GameObject triggSpawn;
     public GameObject[] arrangement;
     public GameObject coin;
 
-    private float timeBetweenSpawns = 7f;
-    private float minTimeBetweenSpawns = 3f;
-    private float lastTimeSpawned = 0f;
     private float unit = 0.5f;
     private float translateY = 17f;
 
@@ -23,18 +21,7 @@ public class SpawnArrangement : MonoBehaviour {
         InstantiateMesh();
     }
 
-    void Update () {
-
-        timeBetweenSpawns = (minTimeBetweenSpawns * GlobalVars.maxSpeed) / GlobalVars.speed;
-
-        if (Time.time - lastTimeSpawned > timeBetweenSpawns) 
-        {
-            InstantiateMesh();
-            lastTimeSpawned = Time.time;
-        }
-	}
-
-    void InstantiateMesh()
+    public void InstantiateMesh()
     {
         randomValue = Random.Range(0, 2);
         if (randomValue == 0)
@@ -72,5 +59,7 @@ public class SpawnArrangement : MonoBehaviour {
         {
             Instantiate(coin, new Vector3(position.x * unit, position.y * unit - translateY, 0f), coin.transform.rotation);
         }
+
+        Instantiate(triggSpawn, new Vector3(0f, -17f, 2f),triggSpawn.transform.rotation);
     }
 }

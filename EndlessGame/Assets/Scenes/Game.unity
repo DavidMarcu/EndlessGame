@@ -517,7 +517,6 @@ GameObject:
   - component: {fileID: 735602538}
   - component: {fileID: 735602537}
   - component: {fileID: 735602539}
-  - component: {fileID: 735602540}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -562,23 +561,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiHighscore: {fileID: 986863221}
   uiScore: {fileID: 642500499}
---- !u!114 &735602540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 735602536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a9e5b223664c894b896e808f7d4142b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrangement:
-  - {fileID: 1313489431497012, guid: 6af16b47cdd96cf43a574e0aba62f6e4, type: 2}
-  - {fileID: 1313629447839274, guid: 6e9913c777d896342ac0b87abab5ff4b, type: 2}
-  - {fileID: 1707705650082130, guid: 2a5eef2ce488f6b4483d0e05cb13d45a, type: 2}
-  - {fileID: 1632353015680088, guid: 34aa14b0f50713540953b7829129931c, type: 2}
-  coin: {fileID: 1490393692452300, guid: 5530f52f954e35449af5a5707ff2d47c, type: 2}
 --- !u!1001 &832129077
 Prefab:
   m_ObjectHideFlags: 0
@@ -868,6 +850,7 @@ GameObject:
   - component: {fileID: 1756464684}
   - component: {fileID: 1756464683}
   - component: {fileID: 1756464682}
+  - component: {fileID: 1756464687}
   m_Layer: 0
   m_Name: ObjectsDestroyer
   m_TagString: Untagged
@@ -949,12 +932,30 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756464681}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 11, z: -0}
-  m_LocalScale: {x: 7, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 11, z: 1}
+  m_LocalScale: {x: 7, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1756464687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1756464681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9e5b223664c894b896e808f7d4142b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggSpawn: {fileID: 1595375591693280, guid: 0670a811934f4b84dac0a1dc8ff18122, type: 2}
+  arrangement:
+  - {fileID: 1313489431497012, guid: 6af16b47cdd96cf43a574e0aba62f6e4, type: 2}
+  - {fileID: 1313629447839274, guid: 6e9913c777d896342ac0b87abab5ff4b, type: 2}
+  - {fileID: 1707705650082130, guid: 2a5eef2ce488f6b4483d0e05cb13d45a, type: 2}
+  - {fileID: 1632353015680088, guid: 34aa14b0f50713540953b7829129931c, type: 2}
+  coin: {fileID: 1490393692452300, guid: 5530f52f954e35449af5a5707ff2d47c, type: 2}
 --- !u!1 &1821874698
 GameObject:
   m_ObjectHideFlags: 0

@@ -517,6 +517,7 @@ GameObject:
   - component: {fileID: 735602538}
   - component: {fileID: 735602537}
   - component: {fileID: 735602539}
+  - component: {fileID: 735602540}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -561,6 +562,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiHighscore: {fileID: 986863221}
   uiScore: {fileID: 642500499}
+--- !u!114 &735602540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 735602536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154db891df850bb459a8cc3cf3c44765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionIndex: 0
 --- !u!1001 &832129077
 Prefab:
   m_ObjectHideFlags: 0

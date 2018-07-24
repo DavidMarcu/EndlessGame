@@ -31,6 +31,7 @@ public class Collect : MonoBehaviour {
         {
             if (other.gameObject.tag == "PowerUpOne")
             {
+                PlayerPrefs.SetInt("mSuperSpeedCollected", PlayerPrefs.GetInt("mSuperSpeedCollected", 0) + 1);
                 Destroy(other.gameObject);
                 StartCoroutine(SuperSpeed());
             }

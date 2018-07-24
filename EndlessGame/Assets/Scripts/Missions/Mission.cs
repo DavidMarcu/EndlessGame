@@ -5,8 +5,9 @@ using UnityEngine;
 public abstract class Mission : MonoBehaviour {
 
     public string title;
-    public bool isFinished;
+    public string description;
     public int selfIndex;
+    public bool isFinished;
 
     public abstract void MissionLogic();
 

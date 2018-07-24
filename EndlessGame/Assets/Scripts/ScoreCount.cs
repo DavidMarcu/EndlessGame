@@ -20,7 +20,7 @@ public class ScoreCount : MonoBehaviour {
     {
         if (GlobalVars.isGameOn)
         {
-            score += GlobalVars.scoreMultiplier * Time.deltaTime;
+            score += GlobalVars.score * Time.deltaTime * PlayerPrefs.GetInt("ScoreMultiplier", 1);
             uiScore.text = "Score : " + ((int)score).ToString();
 
             if(score > PlayerPrefs.GetInt("Highscore", 0))

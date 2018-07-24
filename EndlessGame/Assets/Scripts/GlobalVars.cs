@@ -8,7 +8,7 @@ public class GlobalVars{
     public static float maxSpeed = 10f;
     public static float normalSpeed = 10f;
     public static float ultraSpeed = 20f;
-    public static float scoreMultiplier = 5f;
+    public static float score = 5f;
     public static bool isGameOn = true;
     public static bool canPlayerAct = true;
     public static bool canPlayerDestroy = false;

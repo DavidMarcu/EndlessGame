@@ -6,13 +6,14 @@ public class MissionManager : MonoBehaviour
 {
 
     private List<Mission> missions = new List<Mission>();
-    public int missionIndex;
+    private int missionIndex;
 
     private void Start()
     {
         missions.Add(new MissionZero());
         missions.Add(new MissionOne());
         missions.Add(new MissionTwo());
+        PlayerPrefs.SetInt("MissionIndex", 0);
     }
 
     private void Update()
@@ -22,10 +23,6 @@ public class MissionManager : MonoBehaviour
         if (missionIndex < missions.Capacity)
         {
             missions[missionIndex].MissionLogic();
-        }
-        else
-        {
-            PlayerPrefs.SetInt("MissionIndex", 0);
         }
     }
 }

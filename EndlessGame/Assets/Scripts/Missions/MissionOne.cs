@@ -17,7 +17,7 @@ public class MissionOne : Mission {
         print("misiunea unu" + PlayerPrefs.GetInt("ScoreMultiplier"));
         if (isFinished)
         {
-            PlayerPrefs.SetInt("ScoreMultiplier", PlayerPrefs.GetInt("ScoreMultiplier", 1) + 1);
+            PlayerPrefs.SetInt("ScoreMultiplier", PlayerPrefs.GetInt("ScoreMultiplier", 1) + 1); // score multiplier needs to be reseted after replaying the game
             PlayerPrefs.SetInt("MissionIndex", selfIndex + 1);
         }
         else
@@ -31,9 +31,10 @@ public class MissionOne : Mission {
 
     private bool FirstTask()
     {
-
+        print("mSuperSpeedCollected =" + PlayerPrefs.GetInt("mSuperSpeedCollected"));
         if (PlayerPrefs.GetInt("mSuperSpeedCollected", 0) >= 10)
         {
+            PlayerPrefs.SetInt("mSuperSpeedCollected", 0);
             return true;
         }
         return false;

@@ -32,6 +32,7 @@ public class MissionZero : Mission {
     private bool FirstTask()
     {
         PlayerPrefs.SetInt("mCoinsInOneRun", GlobalVars.coins);
+        print("mCoinsInOneRun = " + PlayerPrefs.GetInt("mCoinsInOneRun", 0));
         if (PlayerPrefs.GetInt("mCoinsInOneRun",0) >= 10)
         {
             return true;
@@ -42,6 +43,7 @@ public class MissionZero : Mission {
     private bool SecondTask()
     {
         PlayerPrefs.SetInt("mScore", (int)GlobalVars.score);
+        print("mScore = " + PlayerPrefs.GetInt("mScore", 0));
         if (PlayerPrefs.GetInt("mScore",0) >= 50)
         {
             return true;

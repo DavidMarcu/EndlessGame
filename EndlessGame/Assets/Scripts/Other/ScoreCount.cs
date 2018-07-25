@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreCount : MonoBehaviour {
 
-    private float score = 0f;
+    private float score = 5f;
 
     public Text uiHighscore;
     public Text uiScore;
@@ -20,15 +20,15 @@ public class ScoreCount : MonoBehaviour {
     {
         if (GlobalVars.isGameOn)
         {
-            score += GlobalVars.score * Time.deltaTime * PlayerPrefs.GetInt("ScoreMultiplier", 1);
-            uiScore.text = "Score : " + ((int)score).ToString();
+            GlobalVars.score += score * Time.deltaTime * PlayerPrefs.GetInt("ScoreMultiplier", 1);
+            uiScore.text = "Score : " + ((int)GlobalVars.score).ToString();
 
-            if(score > PlayerPrefs.GetInt("Highscore", 0))
+            if(GlobalVars.score > PlayerPrefs.GetInt("Highscore", 0))
             {
-                PlayerPrefs.SetInt("Highscore", (int)score);
+                PlayerPrefs.SetInt("Highscore", (int)GlobalVars.score);
                 SetUiHighscore();
             }
-            print((int)score);
+            print((int)GlobalVars.score);
         }
     }
 

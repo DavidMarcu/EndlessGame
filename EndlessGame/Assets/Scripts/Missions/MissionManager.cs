@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class MissionManager : MonoBehaviour
 {
-
+    public GameObject missionsManager;
     private List<Mission> missions = new List<Mission>();
     private int missionIndex;
 
     private void Start()
     {
-        missions.Add(new MissionZero());
-        missions.Add(new MissionOne());
-        missions.Add(new MissionTwo());
+        missions.Add(missionsManager.GetComponent<MissionZero>());
+        missions.Add(missionsManager.GetComponent<MissionOne>());
+        missions.Add(missionsManager.GetComponent<MissionTwo>());
         PlayerPrefs.SetInt("MissionIndex", 0);
     }
 
     private void Update()
     {
         missionIndex = PlayerPrefs.GetInt("MissionIndex", 0);
-
-        if (missionIndex < missions.Capacity)
+        if (missionIndex < missions.Count)
         {
             missions[missionIndex].MissionLogic();
         }

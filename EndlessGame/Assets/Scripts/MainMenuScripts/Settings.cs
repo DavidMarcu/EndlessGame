@@ -9,4 +9,9 @@ public class Settings : MonoBehaviour {
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void ResetAllGameData()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

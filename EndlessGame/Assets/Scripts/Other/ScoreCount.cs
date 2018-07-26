@@ -9,10 +9,10 @@ public class ScoreCount : MonoBehaviour {
 
     public Text uiHighscore;
     public Text uiScore;
+    public Text uiScoreMultiplier;
 
     private void Start()
     {
-        PlayerPrefs.SetInt("Highscore", 0); // this need to be removed for highscore to work
         SetUiHighscore();
     }
 
@@ -22,8 +22,9 @@ public class ScoreCount : MonoBehaviour {
         {
             GlobalVars.score += score * Time.deltaTime * PlayerPrefs.GetInt("ScoreMultiplier", 1);
             uiScore.text = "Score : " + ((int)GlobalVars.score).ToString();
+            uiScoreMultiplier.text = "x" + PlayerPrefs.GetInt("ScoreMultiplier", 1);
 
-            if(GlobalVars.score > PlayerPrefs.GetInt("Highscore", 0))
+            if (GlobalVars.score > PlayerPrefs.GetInt("Highscore", 0))
             {
                 PlayerPrefs.SetInt("Highscore", (int)GlobalVars.score);
                 SetUiHighscore();

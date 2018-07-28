@@ -22,7 +22,9 @@ public class MissionZero : Mission {
         }
         else
         {
-            if(FirstTask() && SecondTask())
+            bool firstTaskEnded = FirstTask();
+            bool secondTaskEnded = SecondTask();
+            if(firstTaskEnded && secondTaskEnded)
             {
                 isFinished = true;
             }
@@ -35,8 +37,10 @@ public class MissionZero : Mission {
         print("mCoinsInOneRun = " + PlayerPrefs.GetInt("mCoinsInOneRun", 0));
         if (PlayerPrefs.GetInt("mCoinsInOneRun",0) >= 10)
         {
+            firstTask = "Collect 10 coins in one run : completed!";
             return true;
         }
+        firstTask = "Collect 10 coins in one run : " + (10 - GlobalVars.coins) + " left.";
         return false;
     }
 
@@ -46,8 +50,10 @@ public class MissionZero : Mission {
         print("mScore = " + PlayerPrefs.GetInt("mScore", 0));
         if (PlayerPrefs.GetInt("mScore",0) >= 50)
         {
+            secondTask = "Score more than 50 points : completed!";
             return true;
         }
+        secondTask = "Score more than 50 points : " + (50 - PlayerPrefs.GetInt("mScore", 0)) + " left.";
         return false;
     }
 }

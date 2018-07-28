@@ -9,6 +9,10 @@ public abstract class Mission : MonoBehaviour {
     public int selfIndex;
     public bool isFinished;
 
+    public string firstTask = "";
+    public string secondTask = "";
+    public string thirdTask = "";
+    
     public abstract void MissionLogic();
 
 }

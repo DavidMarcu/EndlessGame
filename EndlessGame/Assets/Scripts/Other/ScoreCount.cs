@@ -13,6 +13,7 @@ public class ScoreCount : MonoBehaviour {
 
     private void Start()
     {
+        GlobalVars.score = 0;
         SetUiHighscore();
     }
 

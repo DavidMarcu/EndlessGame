@@ -53,7 +53,7 @@ public class Collect : MonoBehaviour {
         GlobalVars.maxSpeed = GlobalVars.ultraSpeed;
         GlobalVars.canPlayerDestroy = true;
         Canvas clock = Instantiate(powerUpOne);
-        yield return new WaitForSecondsRealtime(GlobalVars.powerUpEffectTime);
+        yield return new WaitForSeconds(GlobalVars.powerUpEffectTime);
         Destroy(clock.gameObject);
         GlobalVars.canPlayerDestroy = false;
         GlobalVars.canPlayerAct = true;
@@ -65,7 +65,7 @@ public class Collect : MonoBehaviour {
     {
         GlobalVars.areCoinsDuplicated = true;
         Canvas clock = Instantiate(powerUpTwo);
-        yield return new WaitForSecondsRealtime(GlobalVars.powerUpEffectTime);
+        yield return new WaitForSeconds(GlobalVars.powerUpEffectTime);
         GlobalVars.areCoinsDuplicated = false;
         Destroy(clock.gameObject);
     }

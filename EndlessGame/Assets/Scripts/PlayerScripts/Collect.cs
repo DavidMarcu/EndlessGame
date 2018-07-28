@@ -5,10 +5,17 @@ using UnityEngine.UI;
 
 public class Collect : MonoBehaviour {
 
-    public Text uiCoinsEarned;
+    private Text uiCoinsEarned;
+    private GameObject uiCoinsEarnedObject;
 
     public Canvas powerUpOne;
     public Canvas powerUpTwo;
+
+    private void Start()
+    {
+        uiCoinsEarnedObject = GameObject.FindWithTag("CoinsEarned");
+        uiCoinsEarned = uiCoinsEarnedObject.GetComponent<Text>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

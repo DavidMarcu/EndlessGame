@@ -17,6 +17,11 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("Settings");
     }
 
+    public void GoToSkins()
+    {
+        SceneManager.LoadScene("PlayerSkinsMenu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

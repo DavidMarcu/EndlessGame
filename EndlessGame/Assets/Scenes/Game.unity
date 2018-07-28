@@ -264,8 +264,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148328679}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.859466, y: 1.9593124, z: -1.3947372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 735602538}
@@ -349,6 +349,10 @@ Prefab:
         type: 2}
       propertyPath: m_Constraints
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029949352595122, guid: 69c74ecf9e9388640ae6151db49543f6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69c74ecf9e9388640ae6151db49543f6, type: 2}
@@ -1019,6 +1023,7 @@ GameObject:
   - component: {fileID: 735602537}
   - component: {fileID: 735602539}
   - component: {fileID: 735602540}
+  - component: {fileID: 735602541}
   m_Layer: 0
   m_Name: GameLogic
   m_TagString: Untagged
@@ -1043,8 +1048,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 735602536}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.859466, y: -1.9593123, z: 1.3947372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 148328680}
@@ -1076,6 +1081,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missionsManager: {fileID: 642819213}
+--- !u!114 &735602541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 735602536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bd1b832f4571343a4e2a880db5fc34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSkins:
+  - {fileID: 1029949352595122, guid: 69c74ecf9e9388640ae6151db49543f6, type: 2}
+  - {fileID: 1496497463747214, guid: 11aa4892b62c8af439f4eefd69406f37, type: 2}
+  - {fileID: 1801316079207976, guid: d842f699ad150414d81a14904304f194, type: 2}
 --- !u!1 &756533613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2266,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756464681}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.859466, y: 9.040688, z: 2.3947372}
+  m_LocalPosition: {x: -0.859466, y: 9.040688, z: 1.39}
   m_LocalScale: {x: 7, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 148328680}
@@ -2322,7 +2342,7 @@ GameObject:
   - component: {fileID: 1821874700}
   m_Layer: 5
   m_Name: CoinsEarned
-  m_TagString: Untagged
+  m_TagString: CoinsEarned
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

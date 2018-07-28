@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
+    public GameObject confirmationWindow;
+
 	public void PlayGame()
     {
         SceneManager.LoadScene("Game");
@@ -18,6 +20,22 @@ public class MainMenu : MonoBehaviour {
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void OpenConfirmationWindow()
+    {
+        if (!confirmationWindow.activeSelf)
+        {
+            confirmationWindow.SetActive(true);
+        }
+    }
+
+    public void CloseConfirmationWindow()
+    {
+        if (confirmationWindow.activeSelf)
+        {
+            confirmationWindow.SetActive(false);
+        }
     }
 
 }

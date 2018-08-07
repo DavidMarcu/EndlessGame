@@ -6,6 +6,7 @@ public class Destructor : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        //print(other.gameObject.tag + " " + GlobalVars.canPlayerAct + "<<<<<<<<<<<<<<<");
 
         if(other.gameObject.tag == "Obstacle" && GlobalVars.canPlayerAct)
         {

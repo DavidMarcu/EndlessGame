@@ -11,13 +11,15 @@ public class PlayerShot : MonoBehaviour {
 
     void FixedUpdate () {
 
+        print(canShoot + " ? ");
+
         delayShotSeconds = (0.8f * GlobalVars.maxSpeed) / GlobalVars.speed; // 0.8 is the minimum value for delayShotSeconds
 
         if (canShoot)
         {
             if (Input.GetMouseButtonDown(0) && GlobalVars.canPlayerAct)
             {
-                Instantiate(bullet, new Vector3(this.transform.position.x, this.transform.position.y - this.transform.localScale.y + 0.5f, this.transform.position.z), Quaternion.identity);
+                Instantiate(bullet, new Vector3(this.transform.position.x, this.transform.position.y - this.transform.localScale.y - 1.5f, this.transform.position.z), Quaternion.identity);
                 canShoot = false;
                 lastTime = Time.time;
             }

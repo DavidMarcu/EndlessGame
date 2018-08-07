@@ -77,8 +77,8 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - Color_E9F0ADEC: {r: 0.2311321, g: 1, b: 0.8632187, a: 0}
-    - Color_F55527DD: {r: 8, g: 8, b: 8, a: 0}
+    - Color_E9F0ADEC: {r: 0, g: 1, b: 0.7125051, a: 0}
+    - Color_F55527DD: {r: 2, g: 0.7120336, b: 0, a: 0}
     - Vector2_BFB61D5F: {r: 1, g: 2, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -10,7 +10,7 @@
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.TextureShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Value\": {\n        \"m_SerializedTexture\": \"\",\n        \"m_Guid\": \"8aad5f91cd175c0458ae752a3cf73cc0\"\n    },\n    \"m_Name\": \"Hologram Texture\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"d447d7a1-72ac-44c5-8f9b-5ed1a8d9ea1c\"\n    },\n    \"m_Modifiable\": true\n}"
+            "JSONnodeData": "{\n    \"m_Value\": {\n        \"m_SerializedTexture\": \"\",\n        \"m_Guid\": \"79e6ab920cf52514693ead4dca4e8a6c\"\n    },\n    \"m_Name\": \"Hologram Texture\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"d447d7a1-72ac-44c5-8f9b-5ed1a8d9ea1c\"\n    },\n    \"m_Modifiable\": true\n}"
         },
         {
             "typeInfo": {
